@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@import './variables.scss';
+
+@include mat.core();
+
+:root {
+  @include mat.all-component-themes($Todonosquare-theme);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Roboto, sans-serif;
+}
+
+.basic-link {
+  color: mat.get-theme-color($Todonosquare-theme, primary);
+  cursor: pointer;
+}
+
+.centered-item {
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.full-width-item {
+  width: 100%;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.h-centered-item {
+  margin-right: auto;
+  margin-left: auto;
+}

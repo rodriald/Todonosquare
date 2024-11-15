@@ -1,0 +1,36 @@
+<mat-card class="centered-item auth-page">
+  <img src="logos/app-logo.png" class="login-logo h-centered-item" />
+  @if (showLoginForm) {
+    <app-authentication-form
+      title="Login"
+      buttonLabel="Login"
+      (submit)="onLoginSubmit($event)"
+    >
+    </app-authentication-form>
+  } @else {
+    <app-authentication-form
+      title="Signup"
+      buttonLabel="Create Account"
+      (submit)="onSignupSubmit($event)"
+    >
+    </app-authentication-form>
+  }
+  <div>
+    @if (showLoginForm) {
+    <span class="centered-text auth-form-label"
+      >Don't have an account?&nbsp;<span
+        class="basic-link"
+        (click)="toggleLoginForm()"
+      >
+        Signup.</span
+      ></span
+    >
+    
+    } @else {
+    <span class="centered-text auth-form-label">
+      Already have an account?&nbsp;
+      <span class="basic-link" (click)="toggleLoginForm()"> Login.</span>
+    </span>
+    }
+  </div>
+</mat-card>

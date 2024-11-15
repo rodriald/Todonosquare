@@ -1,0 +1,26 @@
+mat-card {
+  padding: 2em;
+  width: 25em;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2em;
+}
+
+.auth-form-label {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.login-logo {
+  width: 250px;
+  filter: invert(1);
+}

@@ -1,0 +1,7 @@
+<mat-list>
+  @for (item of tasks; track $index) {
+    <mat-checkbox [checked]="item.completed">{{item.name}}</mat-checkbox>
+    <br>
+  }
+ </mat-list>
+ 

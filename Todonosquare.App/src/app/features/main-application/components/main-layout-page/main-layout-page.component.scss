@@ -1,0 +1,13 @@
+.main-page {
+  width: 50em;
+  min-height: 50em;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-task-section {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}

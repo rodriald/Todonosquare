@@ -1,0 +1,7 @@
+@use '@angular/material' as mat;
+@import 'src/variables.scss';
+
+#main-content {
+  background-image: linear-gradient(mat.get-theme-color($Todonosquare-theme, primary), mat.get-theme-color($Todonosquare-theme, primary, 70));
+  height: 100%;
+}
