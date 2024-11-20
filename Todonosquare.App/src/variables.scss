@@ -4,9 +4,15 @@ $Todonosquare-theme: mat.define-theme((
   color: (
     theme-type: light,
     primary: mat.$azure-palette,
-    tertiary: mat.$blue-palette,
+    tertiary: mat.$red-palette
   ),
   density: (
     scale: 0,
   )
 ));
+
+$theme-primary-color: mat.get-theme-color($Todonosquare-theme, primary);
+$theme-secondary-color: mat.get-theme-color($Todonosquare-theme, secondary);
+$theme-tertiary-color: mat.get-theme-color($Todonosquare-theme, tertiary);
+
+$white-text-color: #f0f0f0;

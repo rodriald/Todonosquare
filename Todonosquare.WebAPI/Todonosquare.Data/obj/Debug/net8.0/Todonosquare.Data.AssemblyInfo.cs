@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Todonosquare.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d048ea2a2e69dc5242fcc94240e4a96255959d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b12283e681c1f8f46307d7275ef6d9f4caa58379")]
 [assembly: System.Reflection.AssemblyProductAttribute("Todonosquare.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Todonosquare.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

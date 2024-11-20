@@ -1,0 +1,36 @@
+@use '@angular/material' as mat;
+
+.list-item {
+  @include mat.list-overrides((
+    list-item-one-line-container-height: 4em
+  ));
+
+  &:hover {
+    background-color: #e6e6e6;
+  }
+
+  .task-item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .task-item-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .task-item-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .completed-task {
+    text-decoration: line-through;
+  }
+}

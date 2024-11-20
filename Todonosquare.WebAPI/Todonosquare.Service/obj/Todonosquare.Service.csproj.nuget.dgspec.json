@@ -4,14 +4,14 @@
     "E:\\src\\projects\\Todonosquare\\Todonosquare.WebAPI\\Todonosquare.Service\\Todonosquare.Service.csproj": {}
   },
   "projects": {
-    "E:\\src\\projects\\Todonosquare\\Todonosquare.WebAPI\\Todonosquare.Service\\Todonosquare.Service.csproj": {
+    "E:\\src\\projects\\Todonosquare\\Todonosquare.WebAPI\\Todonosquare.Data\\Todonosquare.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\src\\projects\\Todonosquare\\Todonosquare.WebAPI\\Todonosquare.Service\\Todonosquare.Service.csproj",
-        "projectName": "Todonosquare.Service",
-        "projectPath": "E:\\src\\projects\\Todonosquare\\Todonosquare.WebAPI\\Todonosquare.Service\\Todonosquare.Service.csproj",
+        "projectUniqueName": "E:\\src\\projects\\Todonosquare\\Todonosquare.WebAPI\\Todonosquare.Data\\Todonosquare.Data.csproj",
+        "projectName": "Todonosquare.Data",
+        "projectPath": "E:\\src\\projects\\Todonosquare\\Todonosquare.WebAPI\\Todonosquare.Data\\Todonosquare.Data.csproj",
         "packagesPath": "C:\\Users\\Aldo\\.nuget\\packages\\",
-        "outputPath": "E:\\src\\projects\\Todonosquare\\Todonosquare.WebAPI\\Todonosquare.Service\\obj\\",
+        "outputPath": "E:\\src\\projects\\Todonosquare\\Todonosquare.WebAPI\\Todonosquare.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aldo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,87 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\src\\projects\\Todonosquare\\Todonosquare.WebAPI\\Todonosquare.Service\\Todonosquare.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\src\\projects\\Todonosquare\\Todonosquare.WebAPI\\Todonosquare.Service\\Todonosquare.Service.csproj",
+        "projectName": "Todonosquare.Service",
+        "projectPath": "E:\\src\\projects\\Todonosquare\\Todonosquare.WebAPI\\Todonosquare.Service\\Todonosquare.Service.csproj",
+        "packagesPath": "C:\\Users\\Aldo\\.nuget\\packages\\",
+        "outputPath": "E:\\src\\projects\\Todonosquare\\Todonosquare.WebAPI\\Todonosquare.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Aldo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\src\\projects\\Todonosquare\\Todonosquare.WebAPI\\Todonosquare.Data\\Todonosquare.Data.csproj": {
+                "projectPath": "E:\\src\\projects\\Todonosquare\\Todonosquare.WebAPI\\Todonosquare.Data\\Todonosquare.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

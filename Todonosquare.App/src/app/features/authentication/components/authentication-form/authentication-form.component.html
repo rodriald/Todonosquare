@@ -1,21 +1,27 @@
-<form class="auth-form">
+<form class="auth-form" [formGroup]="form" (submit)="onSubmit()">
   <h3>{{title}}</h3>
   <mat-form-field appearance="outline" class="full-width-item">
     <mat-label>Username</mat-label>
-    <input matInput placeholder="Enter your username">
+    <input matInput placeholder="Enter your username" formControlName="username" required minlength="4">
     <mat-icon matSuffix>person</mat-icon>
+    @if (form.get('username')?.invalid) {
+      <mat-error>Username must have 4 or more characters</mat-error>
+    }
   </mat-form-field>
   <mat-form-field appearance="outline" class="full-width-item">
     <mat-label>Password</mat-label>
-    <input matInput placeholder="Enter your password" type="password">
+    <input matInput placeholder="Enter your password" type="password" formControlName="password" required minlength="5">
     <mat-icon matSuffix>lock</mat-icon>
+    @if (form.get('password')?.invalid) {
+      <mat-error>Username must have 5 or more characters</mat-error>
+    }
   </mat-form-field>
   <button
     mat-flat-button
     color="secondary"
     type="submit"
     class="full-width-item"
-    (click)="onSubmit()"
+    [disabled]="form.invalid"
   >
     {{buttonLabel}}
   </button>

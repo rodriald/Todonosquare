@@ -1,0 +1,16 @@
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\bin\Debug\net8.0\Todonosquare.Service.deps.json
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\bin\Debug\net8.0\Todonosquare.Service.dll
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\bin\Debug\net8.0\Todonosquare.Service.pdb
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\bin\Debug\net8.0\Todonosquare.Data.dll
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\bin\Debug\net8.0\Todonosquare.Data.pdb
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\obj\Debug\net8.0\Todonosquare.Service.csproj.AssemblyReference.cache
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\obj\Debug\net8.0\Todonosquare.Service.GeneratedMSBuildEditorConfig.editorconfig
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\obj\Debug\net8.0\Todonosquare.Service.AssemblyInfoInputs.cache
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\obj\Debug\net8.0\Todonosquare.Service.AssemblyInfo.cs
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\obj\Debug\net8.0\Todonosquare.Service.csproj.CoreCompileInputs.cache
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\obj\Debug\net8.0\Todonosquare.Service.sourcelink.json
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\obj\Debug\net8.0\Todonosq.8B7DBE71.Up2Date
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\obj\Debug\net8.0\Todonosquare.Service.dll
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\obj\Debug\net8.0\refint\Todonosquare.Service.dll
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\obj\Debug\net8.0\Todonosquare.Service.pdb
+E:\src\projects\Todonosquare\Todonosquare.WebAPI\Todonosquare.Service\obj\Debug\net8.0\ref\Todonosquare.Service.dll

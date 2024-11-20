@@ -4,14 +4,14 @@
     <app-authentication-form
       title="Login"
       buttonLabel="Login"
-      (submit)="onLoginSubmit($event)"
+      (submitForm)="onLoginSubmit($event)"
     >
     </app-authentication-form>
   } @else {
     <app-authentication-form
       title="Signup"
       buttonLabel="Create Account"
-      (submit)="onSignupSubmit($event)"
+      (submitForm)="onSignupSubmit($event)"
     >
     </app-authentication-form>
   }

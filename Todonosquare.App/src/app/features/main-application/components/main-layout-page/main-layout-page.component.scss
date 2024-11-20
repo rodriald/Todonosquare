@@ -1,13 +1,55 @@
-.main-page {
-  width: 50em;
-  min-height: 50em;
+@use '@angular/material' as mat;
+@import 'src/variables.scss';
+
+.main-menu {
+  @include mat.toolbar-overrides((
+    container-background-color: #34312d,
+    container-text-color: $white-text-color,
+  ));
+
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+
+  .menu-logo {
+    width: 10em;
+  }
+}
+
+.main-content {
+  width: 50%;
+  margin-top: 5em;
+  margin-bottom: 5em;
   padding: 2em;
   display: flex;
   flex-direction: column;
 }
 
-.add-task-section {
+.task-fields-section {
   display: flex;
   flex-direction: row;
   gap: 1em;
+
+  .fields-button {
+    margin-top: 0.7em;
+
+    &.tertiary-button {
+      @include mat.button-overrides((
+        container-color: $theme-tertiary-color
+      ));
+    }
+  }
+
+  .task-name-field {
+    width: 15em;
+  }
+
+  .task-date-field {
+    width: 12em;
+  }
+}
+
+.task-sections-divider {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }

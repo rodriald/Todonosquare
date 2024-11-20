@@ -1,7 +1,25 @@
-<mat-list>
-  @for (item of tasks; track $index) {
-    <mat-checkbox [checked]="item.completed">{{item.name}}</mat-checkbox>
-    <br>
-  }
- </mat-list>
- 
+@if (isLoading) {
+  <mat-spinner class="h-centered-item"></mat-spinner>
+} @else {
+  <mat-list>
+    @for (task of tasks; track $index) {
+      <mat-list-item class="list-item">
+        <div class="task-item-container">
+          <div class="task-item-name">
+            <mat-checkbox matTooltip="Complete task" [checked]="task.isCompleted" (click)="onToggleTaskCompleted(task)"></mat-checkbox>
+            <span [class.completed-task]="task.isCompleted">{{task.title}}</span>
+          </div>
+          <div class="task-item-actions">
+            <button mat-icon-button matTooltip="Edit task" (click)="onEditTask(task)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="Delete task" (click)="onRemoveTask(task.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    }
+   </mat-list>
+}

@@ -23,4 +23,6 @@ export const authReducer = createReducer(
   on(authActions.signup, (state) => ({...state, isLoading: true})),
   on(authActions.signupSuccess, (state, action) => ({...state, isLoading: false, token: action.authResponse.token, username: action.authResponse.username})),
   on(authActions.signupFailure, (state, action) => ({...state, isLoading: false, errorMessage: action.errorMessage})),
+  on(authActions.initAuthenticationSuccess, (state, action) => ({...state, token: action.token, username: action.username})),
+  on(authActions.logout, (state) => ({...state, token: '', username: ''})),
 );

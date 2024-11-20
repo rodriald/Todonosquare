@@ -1,12 +1,75 @@
-<mat-card class="centered-item main-page">
-  <div class="add-task-section">
-    <mat-form-field appearance="outline" class="full-width-item">
-      <mat-label>Add task</mat-label>
-      <input matInput placeholder="Enter task name">
+<mat-toolbar class="main-menu">
+  <img src="logos/app-logo.png" class="menu-logo" />
+  <h3>Welcome {{username}}</h3>
+  <button mat-button (click)="onLogoutClick()">Logout</button>
+</mat-toolbar>
+<mat-card class="main-content h-centered-item">
+  <h4>Add New Task</h4>
+  <div class="task-fields-section" [formGroup]="form">
+    <mat-form-field appearance="outline" class="task-name-field">
+      <mat-label>Task name</mat-label>
+      <input matInput placeholder="Enter task name" formControlName="title" required minlength="3">
+      @if (form.get('title')?.invalid) {
+        <mat-error>Title should have 3 or more characters</mat-error>
+      }
     </mat-form-field>
-    <button mat-fab>
-      <mat-icon>add</mat-icon>
+    <mat-form-field appearance="outline" class="task-date-field">
+      <mat-label>Task date</mat-label>
+      <input matInput [matDatepicker]="taskDatePicker" placeholder="Select task date" formControlName="date">
+      <mat-datepicker-toggle matIconSuffix [for]="taskDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #taskDatePicker></mat-datepicker>
+    </mat-form-field>
+    <button mat-flat-button class="fields-button" [disabled]="form.invalid" (click)="onAddTaskClick()">
+      Add Task
+      <mat-icon  iconPositionEnd>add</mat-icon>
     </button>
   </div>
-  <app-tasks-list></app-tasks-list>
+  <mat-divider class="task-sections-divider"></mat-divider>
+  <h4>My Tasks</h4>
+  <div class="task-fields-section">
+    <mat-form-field appearance="outline" class="task-name-field">
+      <mat-label>Search by name</mat-label>
+      <input matInput placeholder="Enter task name">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="task-date-field">
+      <mat-label>Search by date</mat-label>
+      <input matInput [matDatepicker]="dateFilterPicker" placeholder="Select task date">
+      <mat-datepicker-toggle matIconSuffix [for]="dateFilterPicker"></mat-datepicker-toggle>
+      <mat-datepicker #dateFilterPicker></mat-datepicker>
+    </mat-form-field>    
+    <button mat-flat-button class="fields-button">
+      Complete All Tasks
+      <mat-icon iconPositionEnd>check</mat-icon>
+    </button>
+    <button mat-flat-button [matMenuTriggerFor]="deleteTasksMenu" class="fields-button tertiary-button">
+      Delete Tasks
+      <mat-icon  iconPositionEnd>more_vert</mat-icon>
+    </button>
+    <mat-menu #deleteTasksMenu>
+      <button mat-menu-item>
+        <mat-icon>check_box</mat-icon>
+        <span>Delete all completed</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>check_box_outline_blank</mat-icon>
+        <span>Delete all pending</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>delete</mat-icon>
+        <span>Delete all</span>
+      </button>
+    </mat-menu>
+  </div>
+  <mat-tab-group>
+    <mat-tab label="All">
+      <app-tasks-list></app-tasks-list>
+    </mat-tab>
+    <mat-tab label="Pending">
+      <app-tasks-list></app-tasks-list>
+    </mat-tab>
+    <mat-tab label="Completed">
+      <app-tasks-list></app-tasks-list>
+    </mat-tab>
+  </mat-tab-group>
 </mat-card>

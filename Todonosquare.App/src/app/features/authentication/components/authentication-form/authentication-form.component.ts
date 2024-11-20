@@ -3,7 +3,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { IAuthPostModel } from 'src/app/http/interfaces/auth-post.model';
 
 @Component({
@@ -14,7 +14,7 @@ import { IAuthPostModel } from 'src/app/http/interfaces/auth-post.model';
     MatFormFieldModule,
     MatIconModule,
     MatButtonModule,
-    // FormGroupModule
+    ReactiveFormsModule
   ],
   templateUrl: './authentication-form.component.html',
   styleUrl: './authentication-form.component.scss'
@@ -22,15 +22,15 @@ import { IAuthPostModel } from 'src/app/http/interfaces/auth-post.model';
 export class AuthenticationFormComponent {
   @Input() title = '';
   @Input() buttonLabel = '';
-  @Output() submit = new EventEmitter<IAuthPostModel>();
+  @Output() submitForm = new EventEmitter<IAuthPostModel>();
 
   public form = new FormGroup({
     username: new FormControl(''),
-    password: new FormControl(''),
+    password: new FormControl('')
   });
 
   public onSubmit() {
     const authPostModel: IAuthPostModel = this.form.value as IAuthPostModel;
-    this.submit.emit(authPostModel);
+    this.submitForm.emit(authPostModel);
   }
 }

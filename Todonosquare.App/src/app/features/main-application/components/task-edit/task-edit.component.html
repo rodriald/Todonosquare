@@ -1,0 +1,12 @@
+<h3 mat-dialog-title>Edit Task</h3>
+<div [formGroup]="form" class="dialog-content">
+  <mat-form-field appearance="outline" class="full-width-item">
+    <mat-label>Task name</mat-label>
+    <input matInput placeholder="Enter task name" formControlName="title" required minlength="3">
+  </mat-form-field>
+  <mat-checkbox matTooltip="Complete task" formControlName="isCompleted">Is Completed</mat-checkbox>
+</div>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button [mat-dialog-close]="generateFormValue()" cdkFocusInitial [disabled]="form.invalid">Save</button>
+</mat-dialog-actions>

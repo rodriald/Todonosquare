@@ -27,3 +27,12 @@ export const loginFailure = createAction(
   '[Auth] Login Failure',
   props<{ errorMessage: string}>()
 );
+
+export const initAuthenticationSuccess = createAction(
+  '[Auth] Init Authentication Success',
+  props<{ token: string; username: string }>()
+);
+
+export const logout = createAction(
+  '[Auth] Logout'
+);

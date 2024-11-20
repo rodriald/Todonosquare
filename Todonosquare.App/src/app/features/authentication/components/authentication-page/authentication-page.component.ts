@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { Store } from '@ngrx/store';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { AuthenticationFormComponent } from "../authentication-form/authentication-form.component";
 import { fromAuthActions } from 'src/app/store/auth-store';
@@ -28,17 +28,10 @@ export class AuthenticationPageComponent {
   }
 
   public onLoginSubmit(body: IAuthPostModel) {
-    this.store.dispatch(fromAuthActions.login({body: this.validateAndGenerateBody()}));
+    this.store.dispatch(fromAuthActions.login({body: body}));
   }
 
   public onSignupSubmit(body: IAuthPostModel) {
-    this.store.dispatch(fromAuthActions.signup({body: this.validateAndGenerateBody()}));
-  }
-
-  // user form to build the object
-  private validateAndGenerateBody(): IAuthPostModel {
-    return {
-      username: 'testt', password: 'test'
-    };
+    this.store.dispatch(fromAuthActions.signup({body: body}));
   }
 }
